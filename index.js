@@ -1,3 +1,5 @@
+import 'react-native';
+
 const getCurrentCoordinates = ({ timeout = 20000, maximumAge = 1000 }) =>
   new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
