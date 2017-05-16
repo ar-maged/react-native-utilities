@@ -1,0 +1,11 @@
+{
+  "name": "react-native-utilities",
+  "version": "0.1.0",
+  "description": "Utilities for React Native",
+  "author": "A.R. Maged <abdulrahman.maged95@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
