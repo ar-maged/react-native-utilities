@@ -3,7 +3,7 @@ import 'react-native';
 /**
   * Get current coordinates
   * @param {object} options - Options object
-  * @return {object} coordinates object
+  * @return {Promise}
   */
 const getCurrentCoordinates = ({ timeout, maximumAge }) => {
   const options = {
