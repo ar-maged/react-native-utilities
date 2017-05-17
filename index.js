@@ -1,7 +1,15 @@
 import 'react-native';
 
-const getCurrentCoordinates = ({ timeout = 20000, maximumAge = 1000 }) =>
-  new Promise((resolve, reject) => {
+/**
+  * Get current coordinates
+  */
+const getCurrentCoordinates = ({ timeout, maximumAge }) => {
+  const options = {
+    timeout: timeout || 20000,
+    maximumAge: maximumAge || 1000
+  };
+
+  return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
       position =>
         resolve({
@@ -9,8 +17,11 @@ const getCurrentCoordinates = ({ timeout = 20000, maximumAge = 1000 }) =>
           longitude: position.coords.longitude
         }),
       error => reject(error),
-      { timeout, maximumAge }
+      options
     );
   });
+};
 
-export default { getCurrentCoordinates };
+const Location = { getCurrentCoordinates };
+
+export default { Location };

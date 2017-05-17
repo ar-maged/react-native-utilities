@@ -1,6 +1,6 @@
 {
   "name": "react-native-utilities",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Utilities for React Native",
   "author": "A.R. Maged <abdulrahman.maged95@gmail.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react": "15.5.4",
-    "react-native": "0.44.0"
+    "react": "15.4.0",
+    "react-native": "0.42.3"
   }
 }
