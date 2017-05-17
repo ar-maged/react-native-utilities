@@ -5,11 +5,15 @@ import 'react-native';
   * @param {object} options - Options object
   * @return {Promise}
   */
-const getCurrentCoordinates = ({ timeout, maximumAge }) => {
-  const options = {
-    timeout: timeout || 20000,
-    maximumAge: maximumAge || 1000
-  };
+const getCurrentCoordinates = options => {
+  let effectiveOptions = options;
+
+  if (!options) {
+    effectiveOptions = {
+      timeout: 20000,
+      maximumAge: 1000
+    };
+  }
 
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
@@ -19,7 +23,7 @@ const getCurrentCoordinates = ({ timeout, maximumAge }) => {
           longitude: position.coords.longitude
         }),
       error => reject(error),
-      options
+      effectiveOptions
     );
   });
 };
