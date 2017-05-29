@@ -4,3 +4,6 @@
 </p>
 
 <h1 align="center">React Native Utilities</h1>
+
+## Usage
+* `npm i -S react-native-utilities` or `yarn add react-native-utilities`
